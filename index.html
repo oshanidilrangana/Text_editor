@@ -67,6 +67,14 @@
             </button>
         </li>
 
+        <li>
+            <label for="font-color-picker" class="color-picker-label">
+                <input type="color" class="color-picker" id="font-color-picker" onchange="changeFontColor(this.value)">
+                
+            </label>
+              
+        </li>
+
     </ul>
     <div id="editor"   contenteditable="true">
     
@@ -87,6 +95,11 @@
         function  italic() {
                 document.execCommand ('italic' , true, null)
             }
+
+        function changeFontColor(selectedColor) {
+            document.execCommand('foreColor', false, selectedColor);
+            saveState(); 
+        }
 
     </script>
 </body>
