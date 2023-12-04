@@ -75,6 +75,30 @@
               
         </li>
 
+        <li>
+            <button onclick="changeTextAlignment('left')" class="button"> 
+                <img src="resource/left.png" width="10" height="10"> 
+            </button>
+        </li>
+
+        <li>
+            <button onclick="changeTextAlignment('center')" class="button"> 
+                <img src="resource/center.png" width="10" height="10"> 
+            </button>
+        </li>
+
+        <li>
+            <button onclick="changeTextAlignment('right')" class="button"> 
+                <img src="resource/right.png" width="10" height="10"> 
+            </button>
+        </li>
+
+        <li>
+            <button onclick="changeTextAlignment('justify')" class="button"> 
+                <img src="resource/justify.png" width="10" height="10"> 
+            </button>
+        </li>
+
     </ul>
     <div id="editor"   contenteditable="true">
     
@@ -100,6 +124,20 @@
             document.execCommand('foreColor', false, selectedColor);
             saveState(); 
         }
+
+    function changeTextAlignment(align) {
+    const validAlignments = ['left', 'center', 'right', 'justify'];
+
+    if (validAlignments.includes(align)) {
+        const editor = document.getElementById('editor');
+
+        editor.style.textAlign = align;
+
+        saveState(); 
+    } else {
+        console.error('Invalid alignment value provided.');
+  }
+}
 
     </script>
 </body>
