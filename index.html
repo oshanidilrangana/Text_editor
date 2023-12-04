@@ -55,6 +55,12 @@
             <img src="resource/bold-xxl.png"    >
             </button>
         </li>
+
+        <li><button type="button" onclick="underline()">
+            <img src="resource/format_underline_white_192x192.png"    >
+            </button>
+        </li>
+
     </ul>
     <div id="editor"   contenteditable="true">
     
@@ -67,6 +73,11 @@
         function bold() {
                 document.execCommand ('bold' , true, null)
             }
+
+        function  underline() {
+                document.execCommand ('underline' , true, null)
+            }
+
     </script>
 </body>
 <!-- Author: [K.H.O dilrangana] | [CT/2019/084] -->
