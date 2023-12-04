@@ -61,6 +61,12 @@
             </button>
         </li>
 
+        <li>
+            <button type="button" onclick="italic()">
+                <img src="resource/italic-xxl.png"  >
+            </button>
+        </li>
+
     </ul>
     <div id="editor"   contenteditable="true">
     
@@ -76,6 +82,10 @@
 
         function  underline() {
                 document.execCommand ('underline' , true, null)
+            }
+
+        function  italic() {
+                document.execCommand ('italic' , true, null)
             }
 
     </script>
